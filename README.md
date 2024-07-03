@@ -33,22 +33,22 @@ Guidelines:
 1) Files are organized as required by the Python Flask Framework
 2) You will find the HTML Files in templates folder, CSS and JS files in static folder
 3) THE USER DATA IS STORED IN 3 .csv FILES.
-  3a) General Information is stored in GPS_based_Toll_System_Data.csv
-  3b) Authentication Related Information is stored in GPS_based_Toll_System_User_Auth_Data.csv
-  3c) Transactions Related Information is stored in GPS_based_Toll_System_User_Transaction_Data.csv
-4) Website Explanation:
-   4a) After Website gets loaded, a Google Form will pop up to collect general information of the user, you may fill it
-   4b) You have to FIRST REGISTER, THEN LOGIN, THEN REGISTER YOUR VEHICLE AT /register, /login and /register_vehicle routes respectively
-   4c) You would be able to access /profile route only after you login
-   4d) /profile route will have a dashboard with a "Start Simulation" button, /simulation route will display the vehicle movement simulation.
+   1) General Information is stored in GPS_based_Toll_System_Data.csv
+   2) Authentication Related Information is stored in GPS_based_Toll_System_User_Auth_Data.csv
+   3) Transactions Related Information is stored in GPS_based_Toll_System_User_Transaction_Data.csv
+5) Website Explanation:
+   1) After Website gets loaded, a Google Form will pop up to collect general information of the user, you may fill it
+   2) You have to FIRST REGISTER, THEN LOGIN, THEN REGISTER YOUR VEHICLE AT /register, /login and /register_vehicle routes respectively
+   3) You would be able to access /profile route only after you login
+   4) /profile route will have a dashboard with a "Start Simulation" button, /simulation route will display the vehicle movement simulation.
        "Google Cloud Console" Platform API has been used for Generating Maps. GREEN MARKER IS YOUR ENTRY POINT. RED MARKER IS YOUR EXIT POINT. YELLOW MARKERS ARE YOUR CHECK POINTS AND BLUE MARKER IS YOU.
        As you click different buttons, you will see the BLUE MARKER  moving from Source to Destination. /transactions route has all the transaction details of the user.
        This route has "Show Toll Prices" button. It pops a modal containing info about the toll prices depending upon vehicle category and congestion time.
        It also displays the entire transaction history and a Toll Receipt is attached with each transaction.
-   4e) When you click the "Start Simulation" button, THE BACKEND WILL TAKE 2-3 MINUTES TO RUN THE SIMULATION after which you will be REDIRECTED to /transactions route where you can find the Receipt,
+   5) When you click the "Start Simulation" button, THE BACKEND WILL TAKE 2-3 MINUTES TO RUN THE SIMULATION after which you will be REDIRECTED to /transactions route where you can find the Receipt,
     Transaction History and Toll Info
-   4f) Then you can check the /simulation route to find the simulation in the form of Maps generated using Folium.
-   4g) You can Logout once your work is done.
+   6) Then you can check the /simulation route to find the simulation in the form of Maps generated using Folium.
+   7) You can Logout once your work is done.
 
 What does the Website try to show:
 The Website tries to simulate the upcoming technology of GPS based Toll System in India which will soon replace the Fastag Technology. 
