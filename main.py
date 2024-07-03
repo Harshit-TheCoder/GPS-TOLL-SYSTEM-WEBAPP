@@ -4,10 +4,14 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 import pandas as pd
 import ast
 from gpscode import startSimulation
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 app = Flask(__name__)
 bootstrap = Bootstrap5(app)
-app.config['SECRET_KEY'] = '12345gpsprojectgps12345'
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 user_data = pd.read_csv('GPS_based_Toll_System_Data.csv')
 user_auth_data = pd.read_csv('GPS_based_Toll_System_User_Auth_Data.csv')
 user_transaction_data = pd.read_csv('GPS_based_Toll_System_User_Transaction_Data.csv')

@@ -1,5 +1,6 @@
 # IMPORTING LIBRARIES
 import io
+import os
 import googlemaps
 from googlemaps.convert import decode_polyline
 import simpy
@@ -18,10 +19,12 @@ import time as t
 import math
 import ast
 import random
+from dotenv import load_dotenv
 from vehicle_average_speed import vehicleAvgSpeedDf
 
+load_dotenv()
 
-API_KEY = 'AIzaSyBfQGZNIR4VJgL1U20rlY6sINSjjVnLCm0'
+API_KEY = os.getenv('API_KEY')
 gmaps = googlemaps.Client(key=API_KEY)
 central_point=(28.39576241152042, 76.98194106683556)
 radius_km = 0.5

@@ -53,7 +53,20 @@
                 </div>
                 <div class="mb-3 mt-3">
                   <label for="vcategory" class="form-label" style="font-weight: bold;">Vehicle Category(Sedan/HatchBack etc):</label>
-                  <input type="text" class="form-control" id="vcategory" placeholder="Sedan" name="vcategory">
+                  <!-- <input type="text" class="form-control" id="vcategory" placeholder="Sedan" name="vcategory"> -->
+                   <select class="form-control" id="vcategory" name="vcategory">
+                     <option value="" disabled selected>Select a Category</option>
+                     <option value="Sedan">Sedan</option>
+                     <option value="Sport">Sport</option>
+                     <option value="Micro">Micro</option>
+                     <option value="Van">Van</option>
+                     <option value="Coupe">Coupe</option>
+                     <option value="Truck">Truck</option>
+                     <option value="Bus">Bus</option>
+                     <option value="Crossover">Crossover</option>
+                     <option value="HatchBack">HatchBack</option>
+                     <option value="SUV">SUV</option>
+                   </select>
                 </div>
                 <div class="mb-3">
                   <label for="acctnumber" class="form-label" style="font-weight: bold;">Account Number for Toll Deduction:</label>
