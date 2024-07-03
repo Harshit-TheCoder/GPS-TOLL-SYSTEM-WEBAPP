@@ -1,0 +1,270 @@
+{% extends 'base.html' %}
+{% block header %}
+    
+<nav class="navbar navbar-expand-lg bg-white">
+<div class="container-fluid">
+    <a class="navbar-brand" href="/" style="font-family:'Gothic A1', sans-serif; font-weight: bold;">
+        <img src="../static/images/tollmate.png" alt="" style="width: 100px; height:20px;">
+      </a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+    <a class="nav-link active" aria-current="page" href="/">Home</a>
+    <a class="nav-link" href="/profile">UserInfo</a>
+    <a class="nav-link" href="/register_vehicle">Register Vehicle</a>
+    <a class="nav-link" href="/simulation">Simulation</a>
+    <a class="nav-link" href="/profile/transactions">Transaction History</a>
+    <a href="/logout" class="btn btn-primary" style="margin-left: 650px;">Logout</a>
+</div>
+</div>
+</nav>
+
+{% endblock %}
+{% block content %}
+    <div class="container transactions_table" >
+        <div style="display:inline">
+            <center><h2>Transaction History</h2></center>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter">
+            Show Toll Prices
+            </button>
+        </div>
+        
+    
+    <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Vehicle Toll Prices</h5>
+                
+                </div>
+                <div class="modal-body">
+                    <h3 class="toll-list-heading">Congestion Time: 8a.m to 10a.m, 6p.m to 9p.m</h3>
+                 <ol class="toll-list">
+                    <li>
+                        <h4>Category: Sedan</h4>
+                        <h5>
+                            <ul>
+                                <li>
+                                    Normal Toll Price: 8.5
+                                </li>
+                                <li>
+                                    Toll Price during Congestion Hours: 15.5
+                                </li>
+                            </ul>
+                        </h5>
+                    </li>
+                    <li>
+                        <h4>Category: Sport</h4>
+                        <h5>
+                            <ul>
+                                <li>
+                                    Normal Toll Price: 9.0
+                                </li>
+                                <li>
+                                    Toll Price during Congestion Hours: 17.0
+                                </li>
+                            </ul>
+                        </h5>
+                    </li>
+                    <li>
+                        <h4>Category: SUV</h4>
+                        <h5>
+                            <ul>
+                                <li>
+                                    Normal Toll Price: 10.0
+                                </li>
+                                <li>
+                                    Toll Price during Congestion Hours: 18.0
+                                </li>
+                            </ul>
+                        </h5>
+                    </li>
+                    <li>
+                        <h4>Category: HatchBack</h4>
+                        <h5>
+                            <ul>
+                                <li>
+                                    Normal Toll Price: 7.5
+                                </li>
+                                <li>
+                                    Toll Price during Congestion Hours: 12.5
+                                </li>
+                            </ul>
+                        </h5>
+                    </li>
+                    <li>
+                        <h4>Category: Crossover</h4>
+                        <h5>
+                            <ul>
+                                <li>
+                                    Normal Toll Price: 9.5
+                                </li>
+                                <li>
+                                    Toll Price during Congestion Hours: 17.5
+                                </li>
+                            </ul>
+                        </h5>
+                    </li>
+                    
+                    <li>
+                        <h4>Category: Micro</h4>
+                        <h5>
+                            <ul>
+                                <li>
+                                    Normal Toll Price: 7.0
+                                </li>
+                                <li>
+                                    Toll Price during Congestion Hours: 12.0
+                                </li>
+                            </ul>
+                        </h5>
+                    </li>
+                    <li>
+                        <h4>Category: Coupe</h4>
+                        <h5>
+                            <ul>
+                                <li>
+                                    Normal Toll Price: 8.0
+                                </li>
+                                <li>
+                                    Toll Price during Congestion Hours: 15.0
+                                </li>
+                            </ul>
+                        </h5>
+                    </li>
+                    <li>
+                        <h4>Category: Van</h4>
+                        <h5>
+                            <ul>
+                                <li>
+                                    Normal Toll Price: 6.0
+                                </li>
+                                <li>
+                                    Toll Price during Congestion Hours: 9.0
+                                </li>
+                            </ul>
+                        </h5>
+                    </li>
+                    <li>
+                        <h4>Category: Bus</h4>
+                        <h5>
+                            <ul>
+                                <li>
+                                    Normal Toll Price: 30.0
+                                </li>
+                                <li>
+                                    Toll Price during Congestion Hours: 40.0
+                                </li>
+                            </ul>
+                        </h5>
+                    </li>
+                    <li>
+                        <h4>Category: Truck</h4>
+                        <h5>
+                            <ul>
+                                <li>
+                                    Normal Toll Price: 35.0
+                                </li>
+                                <li>
+                                    Toll Price during Congestion Hours: 45.0
+                                </li>
+                            </ul>
+                        </h5>
+                    </li>
+                 </ol>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                
+                </div>
+            </div>
+            </div>
+        </div>
+        <table>
+            <thead class="table-head">
+                <tr>
+                    <th>Owner Name</th>
+                    <th>User Id</th>
+                    <th>Owner Account Number</th>
+                    <th>Toll price per km</th>
+                    <th>Account Balance</th>
+                    <th>Amount Charged</th>
+                    <th>Entry Time Stamp</th>
+                    <th>Entry Gate Coordinates</th>
+                    <th>Exit Time Stamp</th>
+                    <th>Exit Gate Coordinates</th>
+                    <th>Distance Travelled</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody class="table-body">
+                        <tr>
+                            <td>{{ data['Owner Name'] }}</td>
+                            <td>{{ data['User Id'] }}</td>
+                            <td>{{ data['Owner Account Number']|int }}</td>
+                         {% for i in range(data['Toll price per km']|length) %}
+                            {% if i > 0: %}
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            {% endif %}
+                            <td>{{ data['Toll price per km'][i] }}</td>
+                            <td>{{ data['Account Balance'][i] }}</td>
+                            <td>{{ data['Amount Charged'][i] }}</td>
+                            <td>{{ data['Entry Time Stamp'][i] }}</td>
+                            <td>{{ data['Entry Gate Coordinates'][i] }}</td>
+                            <td>{{ data['Exit Time Stamp'][i] }}</td>
+                            <td>{{ data['Exit Gate Coordinates'][i] }}</td>
+                            <td>{{ data['Distance Travelled'][i] }}</td>
+                            
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-{{i}}">
+                                    Receipt
+                                </button>
+                                  
+                                  <!-- Modal -->
+                                  <div class="modal fade" id="modal-{{i}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLongTitle">Toll Receipt</h5>
+                                          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button> -->
+                                        </div>
+                                        <div class="modal-body">
+                                            <pre>
+
+{% if data['Receipt'][i] %}
+********TOLL RECEIPT********
+{% for key, value in data['Receipt'][i].items() %}
+<span class="receipt-key">{{ key }}:</span> <span class="receipt-value">{{ value }}</span>
+{% endfor %}
+*****Thank You, Visit Again!!*****
+{% else %}
+<p>No receipt details available.</p>
+{% endif %}
+
+
+                                        </pre>
+                                            
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                                          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                                        </div>
+                                      </div>
+                                    </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+              </tbody>
+        </table>
+        
+    
+    </div>
+    <link rel="stylesheet" type="text/css" href="../static/css/table_transaction.css">
+{% endblock %}

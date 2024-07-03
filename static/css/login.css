@@ -1,0 +1,15 @@
+.form-label{
+    color:#000080;
+    padding: 5px;
+    margin:5px;
+}
+.login-heading{
+    color:crimson;
+    padding: 5px;
+    margin:5px;
+}
+.form-control{
+    border-radius: 50px;
+    border: 1px solid crimson;
+    color: crimson;
+}

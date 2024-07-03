@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block header %}
+    
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/" style="font-family:'Gothic A1', sans-serif; font-weight: bold;">
+                <img src="../static/images/tollmate.png" alt="" style="width: 100px; height:20px;">
+              </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link" href="/profile">UserInfo</a>
+            <a class="nav-link" href="/register_vehicle">Register Vehicle</a>
+            <a class="nav-link" href="/simulation">Simulation</a>
+            <a class="nav-link" href="/profile/transactions">Transaction History</a>
+            <a href="/logout" class="btn btn-primary" style="margin-left: 650px;">Logout</a>
+        </div>
+        </div>
+    </nav>
+
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row info-image " >
+            <img src="../static/images/image.png" alt="" style="width:150px;">
+        </div>
+        <div class="row" >
+            <div class="col-6"><h5 class="info-heading">Vehicle Owner Name:</h5></div>
+            <div class="col-6"><h5 class="info-content"> {{ user_info['Username'] }} </h5></div>
+        </div>
+        <div class="row">
+            <div class="col-6"><h5 class="info-heading">Owner Email Id:</h5></div>
+            <div class="col-6"><h5 class="info-content"> {{ user_info['Email'].values[0] }} </h5></div>
+        </div>
+        <div class="row">
+            <div class="col-6"><h5 class="info-heading">Owner User Id:</h5></div>
+            <div class="col-6"><h5 class="info-content"> {{ user_info['User Id'].values[0] }} </h5></div>
+        </div>
+        <div class="row">
+            <div class="col-6"><h5 class="info-heading">Password:</h5></div>
+            <div class="col-6"><h5 class="info-content"> {{ user_info['Password'].values[0] }} </h5></div>
+        </div>
+        <div class="row">
+            <div class="col-6"><h5 class="info-heading">Vehicle Number</h5></div>
+            <div class="col-6"><h5 class="info-content">{{ user_info['Vehicle Number'].values[0] }} </h5></div>
+        </div>
+        <div class="row">
+            <div class="col-6"><h5 class="info-heading">Vehicle Category</h5></div>
+            <div class="col-6"><h5 class="info-content">{{ user_info['Vehicle Category'].values[0] }} </h5></div>
+        </div>
+
+        
+        
+        
+        
+        
+        <a href="{{ url_for('start_simulation') }}" class="btn btn-warning" style="width:200px">Start Simulation</a>
+        <h5 class="info-warning">Note: "Simulation results in about 3 to 5 mins. Redirection will take place after it"</h5>
+    </div>
+    <link rel="stylesheet" type="text/css" href="../static/css/profile.css">
+{% endblock %}

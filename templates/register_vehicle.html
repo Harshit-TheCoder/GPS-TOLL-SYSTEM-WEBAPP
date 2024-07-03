@@ -1,0 +1,73 @@
+{% from 'bootstrap5/form.html' import render_form %}
+{% extends 'base.html' %}
+{% block header %}
+    
+<nav class="navbar navbar-expand-lg bg-white">
+<div class="container-fluid">
+    <a class="navbar-brand" href="/" style="font-family:'Gothic A1', sans-serif; font-weight: bold;">
+        <img src="../static/images/tollmate.png" alt="" style="width: 100px; height:20px;">
+      </a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+    <a class="nav-link active" aria-current="page" href="/">Home</a>
+    <a class="nav-link" href="/profile">UserInfo</a>
+    <a class="nav-link" href="/register_vehicle">Register Vehicle</a>
+    <a class="nav-link" href="/simulation">Simulation</a>
+    <a class="nav-link" href="/profile/transactions">Transaction History</a>
+    <a href="/logout" class="btn btn-primary" style="margin-left: 650px;">Logout</a>
+</div>
+</div>
+</nav>
+
+{% endblock %}
+
+{% block content %}
+<div class="container" style="background-color: rgba(255,255,255,60%);
+                                                width:660px;
+                                                height:660px;
+                                      
+                                                font-family: 'Playwrite GB S', cursive;
+                                                font-optical-sizing: auto;
+                  
+                                                font-style: normal;
+                                                border-radius: 30px;
+                                                margin-top: 60px;">
+    <div class="row">
+        
+        <div class="col-9"><center><h2 class="register-vehicle-heading">Register your Vehicle</h2></center></div>
+        <div class="col-3"><img src="../static/images/car_image-removebg-preview.png" alt="" style="width:100px;margin: 5px;padding: 5px; border-radius: 20px;"></div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+        <div class="col-9">
+           
+            <form action="/register_vehicle" method="POST">
+                <div class="mb-3 mt-3">
+                    <label for="name" class="form-label" style="font-weight: bold;">Vehicle Owner Name:</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="vnumber" class="form-label" style="font-weight: bold;">Vehicle Number:</label>
+                    <input type="text" class="form-control" id="vnumber" placeholder="WB 99 9999" name="vnumber">
+                </div>
+                <div class="mb-3 mt-3">
+                  <label for="vcategory" class="form-label" style="font-weight: bold;">Vehicle Category(Sedan/HatchBack etc):</label>
+                  <input type="text" class="form-control" id="vcategory" placeholder="Sedan" name="vcategory">
+                </div>
+                <div class="mb-3">
+                  <label for="acctnumber" class="form-label" style="font-weight: bold;">Account Number for Toll Deduction:</label>
+                  <input type="password" class="form-control" id="acctnumber" placeholder="1111222233334444" name="acctnumber">
+                </div>
+                <div class="mb-3">
+                    <label for="acctbalance" class="form-label" style="font-weight: bold;">Account Balance:</label>
+                    <input type="password" class="form-control" id="acctbalance" placeholder="50000.0" name="acctbalance">
+                  </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
+              </form>
+        </div>
+    </div >
+</div>
+
+<link rel="stylesheet" type="text/css" href="../static/css/register_vehicle.css">
+{% endblock %}

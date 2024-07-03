@@ -1,0 +1,45 @@
+body{
+    background-image: url('../images/HARSHIT\ PROJECT\ \(1\).png');
+    /* background-position: center; */
+     background-size: cover; 
+    }
+h1{
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+#navbarNav{
+    color:black;
+    font-family: "Lilita One", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap:20px;
+}
+#navbarNav .nav-link{
+    margin:5px;
+    padding:5px;
+    color: #000080;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+    
+}
+#navbarNav .nav-link:hover {
+    margin:5px;
+    padding:5px;
+    color: crimson;
+    font-weight: 1000;
+    text-decoration: underline;
+    animation: bounce 0.3s forwards;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}

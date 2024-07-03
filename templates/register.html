@@ -1,0 +1,81 @@
+{% from 'bootstrap5/form.html' import render_form %}
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container" style="background-color: rgba(255,255,255,60%);
+                              width:650px;
+                              height:650px;
+                              color:black;
+                              /* font-family:'Gothic A1', sans-serif; */
+                              font-family: 'Playwrite GB S', cursive;
+                              font-optical-sizing: auto;
+                  
+                              font-style: normal;
+                              border-radius: 30px;
+                              margin-top: 60px;">
+    <div class="row justify-content-center align-items-center">
+        <center><img src="../static/images/image.png" alt="" style="width:100px;margin: 5px;padding: 5px; border-radius: 50%;"> </center>
+        <center><h1 class="register-heading">Register Page</h1></center>
+        
+        <div class="col-9">
+            
+            <form action="/register" method="POST">
+                <div class="mb-3 mt-3">
+                    <label for="name" class="form-label" style="font-size: 20px; font-weight: bold;">Name:</label>
+                    <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+                  </div>
+                <div class="mb-3 mt-3">
+                  <label for="email" class="form-label" style="font-size: 20px; font-weight: bold;">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                
+                <div class="mb-3">
+                  <label for="pwd" class="form-label" style="font-size: 20px; font-weight: bold;">Password:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
+                </div>
+                <button type="submit" class="btn btn-dark" style="color:white">Submit</button>
+                <a href="/login" class="btn btn-primary" style="color:white">Login</a>
+                <a href="/register_vehicle" class="btn btn-success" style="color:white">Register Vehicle</a>
+              </form>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" type="text/css" href="../static/css/register.css">
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

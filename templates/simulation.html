@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block header %}
+    
+<nav class="navbar navbar-expand-lg bg-white">
+<div class="container-fluid">
+    <a class="navbar-brand" href="/" style="font-family:'Gothic A1', sans-serif; font-weight: bold;">
+        <img src="../static/images/tollmate.png" alt="" style="width: 100px; height:20px;">
+      </a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+    <a class="nav-link active" aria-current="page" href="/">Home</a>
+    <a class="nav-link" href="/profile">UserInfo</a>
+    <a class="nav-link" href="/register_vehicle">Register Vehicle</a>
+    <a class="nav-link" href="/simulation">Simulation</a>
+    <a class="nav-link" href="/profile/transactions">Transaction History</a>
+    <a href="/logout" class="btn btn-primary" style="margin-left: 650px;">Logout</a>
+</div>
+</div>
+</nav>
+
+{% endblock %}
+{% block content %}
+    <center><h1 class="simulation-heading" >Vehicle Movement Simulation</h1></center>
+    <div class="container simulation-container" >
+        
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-2 button-list">
+                {% for id in range(1, 45) %}
+                    {% set class_index = loop.index0 % 3 %}
+                    {% set btn_class = ['btn-primary', 'btn-success', 'btn-warning'][class_index] %}
+                    <!-- <a href="{{ url_for('show_map', position_id=id) }}" class="btn {{ btn_class }}">Show Map {{ id }}</a> -->
+                    <a href="#" class="btn {{ btn_class }}" onclick="loadMap('{{ id }}')" id="showMapButton" style="font-family: 'Lilita One', sans-serif;
+                    font-weight: 300;
+                    font-style: normal;">Show Map {{ id }}</a>
+                    {% endfor %}
+            </div>
+            
+            <div class="col-9" id="mapContainer">
+                <iframe id="mapFrame" src="" frameborder="0" ></iframe>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" type="text/css" href="../static/css/simulation.css">
+    <script>
+        function loadMap(id){
+            var iframe = document.getElementById('mapFrame');
+            var vnum = "{{ vnum }}";
+            var filename = `static/Output_HTML_files/vehicle_${vnum}_position_`+id+`.html`;
+            iframe.src = filename;
+        }
+    </script>
+{% endblock %}

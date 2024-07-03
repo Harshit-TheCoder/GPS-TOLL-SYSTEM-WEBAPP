@@ -1,0 +1,45 @@
+import pandas as pd
+vehicleAvgSpeed={
+    "Sedan":{
+        "Congestion":40.0,
+        "Normal":60.0,
+    },
+    "Sport":{
+        "Congestion":40.0,
+        "Normal":75.0,
+    },
+    "Coupe":{
+        "Congestion":40.0,
+        "Normal":65.0,
+    },
+    "Van":{
+        "Congestion":40.0,
+        "Normal":50.0,
+    },
+    "SUV":{
+        "Congestion":40.0,
+        "Normal":55.0,
+    },
+    "HatchBack":{
+        "Congestion":40.0,
+        "Normal":60.0,
+    },
+    "Truck":{
+        "Congestion":35.0,
+        "Normal":40.0,
+    },
+    "Bus":{
+        "Congestion":35.0,
+        "Normal":40.0,
+    },
+    "Micro":{
+        "Congestion":40.0,
+        "Normal":60.0,
+    },
+    "Crossover":{
+        "Congestion":40.0,
+        "Normal":70.0,
+    },
+}
+
+vehicleAvgSpeedDf = pd.DataFrame(vehicleAvgSpeed)
