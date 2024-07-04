@@ -1,5 +1,5 @@
 Owner Name,User Id,Owner Account Number,Toll price per km,Account Balance,Amount Charged,Entry Time Stamp,Entry Gate Coordinates,Exit Time Stamp,Exit Gate Coordinates,Distance Travelled,Receipt
-Raashi Khanna,RS1234,2342567899126969.0,"[0.0]","[50000.0]","[0.0]","['']","['']","['']","['']","[0.0]","['']"
+Raashi Khanna,RS1234,2342567899126969.0,[0.0],[50000.0],[0.0],[''],[''],[''],[''],[0.0],['']
 Ramesh Kale,RH1235,2342567099126969.0,[0.0],[50000.0],[0.0],[''],[''],[''],[''],[0.0],['']
 Karan Dogra,KT1236,2342567899123969.0,[0.0],[50000.0],[0.0],[''],[''],[''],[''],[0.0],['']
 Champak Singh,CB1237,2342564899126969.0,[0.0],[50000.0],[0.0],[''],[''],[''],[''],[0.0],['']
@@ -9,3 +9,4 @@ Prem Kuute,PM1240,2342567012126969.0,[0.0],[50000.0],[0.0],[''],[''],[''],[''],[
 Champu Singh,CC1241,2342567333326969.0,[0.0],[50000.0],[0.0],[''],[''],[''],[''],[0.0],['']
 Narendra Modi,NC1242,2342560018126969.0,[0.0],[50000.0],[0.0],[''],[''],[''],[''],[0.0],['']
 Rahul Gandhi,RV1243,2342523899126969.0,[0.0],[50000.0],[0.0],[''],[''],[''],[''],[0.0],['']
+test,tS6666,6677558800000000.0,"[0.0, 9.0]","['90000.0', 89981.86]","[0.0, 18.14]","['', '2024-07-04 17:07:43']","['', '(28.382540000000002, 76.96804)']","['', '2024-07-04 17:08:00']","['', '(28.395860000000003, 76.98184)']","[0.0, 2.02]","['', {'Date': '2024-07-04', 'Time': '17:08:00', 'Vehicle Number': 'WB 9TY 6666', 'Vehicle Owner Name': 'test', 'Vehicle Category': 'Sport', 'Distance Travelled': '2.02 km', 'Average Speed': 75.0, 'Entry Point Coordinates': '(28.382540000000002, 76.96804)', 'Entry Date and Time': '2024-07-04 17:07:43', 'Exit Point Coordinates': '(28.395860000000003, 76.98184)', 'Exit Date and Time': '2024-07-04 17:08:00', 'Toll Price': '9.0 rupees per km', 'High Speed Penalty': '0.0 rupees', 'Amount Charged': '18.14 rupees', 'Current Balance': '89981.86 rupees'}]"

@@ -5,7 +5,7 @@ This is GPS BASED TOLL SYSTEM WEB APP made using PYTHON FLASK.
 
 General Information:
 This WebApp takes into account the Area around Kherki Daula Toll Plaza on Delhi-Gurgaon Expressway.
-The Website assumes that a single user can have only have one vehicle so allows the Logged In to register ONLY ONE vehicle under his/her name.
+The Website assumes that a single user can have only have one vehicle so allows the Logged In User to register ONLY ONE vehicle under his/her name.
 The following categories of Vehicles are allowed:👇 
 1) Sedan
 2) Coupe
@@ -21,10 +21,12 @@ The following categories of Vehicles are allowed:👇
 Steps to clone this repository:
 1) Ensure git is installed in your PC alongwith Python and Flask module.
 2) Create a new folder and open it with VSCode. Then go to the Terminal.
-3) You can clone this project by pasting the following command "git clone https://github.com/Harshit-TheCoder/GPS-TOLL-SYSTEM-WEBAPP.git" in your terminal.
+3) You can clone this project by pasting the following command "git clone -b master https://github.com/Harshit-TheCoder/GPS-TOLL-SYSTEM-WEBAPP.git" in your terminal.
+4) cd GPS-TOLL-SYSTEM-WEBAPP
+5) run the code from wsgi.py
 
 Steps to run the Flask App:
-1) Go to the main.py file and click the run button.
+1) Go to the wsgi.py file and click the run button.
 2) In the terminal you will find this link "http://127.0.0.1:5000/".
 3) Click this link and you will be directed to the website.
 4) Press Ctrl+C to stop the WebApp from running.
